@@ -1,5 +1,7 @@
 name: Simple Action Workflow
 
+on: [push]
+
 jobs:
     run-simple-action:
         runs-on: ubuntu-latest
