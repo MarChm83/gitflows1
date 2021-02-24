@@ -6,11 +6,11 @@ jobs:
     run-simple-action:
         runs-on: ubuntu-latest
         steps:
-            - name: action 1
+            - name: greeting to you
               id: greetMe
               uses: actions/hello-world-javascript-action@v1
               with:
                   who-to-greet: Marcin
             - name: log greeting time
-              run: echo "${{steps.greetMe.outputs.time}}"
+              run: "echo greaeting send at: ${{steps.greetMe.outputs.time}}"
 
