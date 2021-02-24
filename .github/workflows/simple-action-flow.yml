@@ -6,11 +6,19 @@ jobs:
     run-simple-action:
         runs-on: ubuntu-latest
         steps:
-            - name: greeting to you
+            - name: greet marcin
               id: greetMe
               uses: actions/hello-world-javascript-action@v1
               with:
                   who-to-greet: Marcin
             - name: log greeting time
               run: echo "${{steps.greetMe.outputs.time}}"
-
+    check-out-my-code:
+        runs-on: ubuntu-latest
+        steps:
+            - name: copy repo code rom commit to runner folder
+              uses: actions/checkout@v1
+            - name: list files in runner folder
+              run: | 
+                  pwd
+                  ls -a
