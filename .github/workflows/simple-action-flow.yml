@@ -1,0 +1,14 @@
+name: Simple Action Workflow
+
+jobs:
+    run-simple-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: action 1
+              id: greetMe
+              uses: actions/hello-world-javascipt-action@v1
+              with:
+                  who-to-greet: Marcin
+            - name: log greeting time
+              run: echo "${{steps.greetMe.outputs.time}}"
+
