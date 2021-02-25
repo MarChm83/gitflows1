@@ -2,7 +2,8 @@ name: Simple Action Workflow
 
 on:
     push:
-    repository_dispatch: go
+    repository_dispatch:
+        types: [go]
 
 jobs:
     run-simple-action:
