@@ -1,3 +1,4 @@
+  
 name: Simple Action Workflow
 
 on:
@@ -25,3 +26,8 @@ jobs:
               run: | 
                   pwd
                   ls -a
+    print-payload:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print trigger event payload
+              run: echo ${{github.event.client_payload.my_environment}}
